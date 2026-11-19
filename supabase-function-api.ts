@@ -29,7 +29,7 @@ const SCOPES = [...QUIZ_SCOPES, "exam"];
 const ORDER = SCOPES; // ordre imposé : chaque test s'ouvre après validation du précédent
 const LABEL: Record<string, string> = { s1: "le quiz de la séance 1", s2: "le quiz de la séance 2", s3: "le quiz de la séance 3", s4: "le quiz de la séance 4", s5: "le quiz de la séance 5", s8: "le quiz métier de la séance 8", s9: "le quiz de la séance 9", exam: "l'examen final" };
 const CFG: Record<string, { n: number; secs: number; base: number }> = {};
-QUIZ_SCOPES.forEach((s) => (CFG[s] = { n: 3, secs: 360, base: 2 }));
+QUIZ_SCOPES.forEach((s) => (CFG[s] = { n: 3, secs: 360, base: 1 }));
 CFG.exam = { n: 12, secs: 1500, base: 1 };
 const CATS = ["concepts", "rctf", "verif", "secu", "fichiers", "integration"];
 const GRACE = 15;
